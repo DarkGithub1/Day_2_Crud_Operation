@@ -6,7 +6,7 @@ const UpdateUser = () => {
   const { id } = useParams();
   const [idd, setId] = useState();
   const [name, setName] = useState();
-  const [email, setEmail] = useState();
+  const [price, setPrice] = useState();
   const [desc, setDesc] = useState();
   const Navigation = useNavigate();
 
@@ -17,7 +17,7 @@ const UpdateUser = () => {
         console.log(res);
         setId(res.data.idd);
         setName(res.data.name);
-        setEmail(res.data.email);
+        setPrice(res.data.price);
         setDesc(res.data.desc);
       })
       .catch((err) => console.log(err));
@@ -41,7 +41,7 @@ const UpdateUser = () => {
 
         <div className="mb-4">
           <label
-            for="id"
+            htmlFor="id"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
             Product Id
@@ -53,14 +53,15 @@ const UpdateUser = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             placeholder="143"
             required
-            value={idd}
+            value={idd ||""}
             onChange={(e)=>setId(e.target.value)}
+            autoComplete="on"
           />
         </div>
 
         <div className="mb-4">
           <label
-            for="name"
+            htmlFor="name"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
             Name
@@ -72,33 +73,34 @@ const UpdateUser = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             placeholder="Your Product Name"
             required
-            value={name}
+            value={name ||""}
             onChange={(e)=>setName(e.target.value)}
+            autoComplete="on"
           />
         </div>
 
         <div className="mb-4">
           <label
-            for="email"
+            htmlFor="price"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
-            Email
+            Price
           </label>
           <input
-            type="email"
-            id="email"
-            name="email"
+            type="number"
+            id="price"
+            name="price"
             className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             placeholder="your email"
             required
-            value={email}
-            onChange={(e)=>setEmail(e.target.value)}
+            value={price ||""}
+            onChange={(e)=>setPrice(e.target.value)}
           />
         </div>
 
         <div className="mb-4">
           <label
-            for="desc"
+            htmlFor="desc"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
             Description
@@ -110,7 +112,7 @@ const UpdateUser = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             placeholder="product description"
             required
-            value={desc}
+            value={desc ||""}
             onChange={(e)=>setDesc(e.target.value)}
           />
         </div>

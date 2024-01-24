@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const userSchema=new mongoose.Schema({
   idd:Number,
   name:String,
-  email:String,
+  price:Number,
   desc:String
 },{timestamps:true})
 

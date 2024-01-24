@@ -54,7 +54,7 @@ app.put('/updateUser/:id',(req,res)=>{
   userModel.findByIdAndUpdate({_id:id},{
     idd:req.body.idd,
     name:req.body.name,
-    email:req.body.email,
+    price:req.body.price,
     desc:req.body.desc
   })
   .then(userData=>res.json(userData))

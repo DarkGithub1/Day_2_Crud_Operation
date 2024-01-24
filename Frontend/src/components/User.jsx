@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const User = () => {
   const [Users, setUsers] = useState([]);
 
@@ -39,19 +40,19 @@ const User = () => {
             </tr>
           </thead>
           <tbody>
-            {Users.map((user, id) => {
+            {Users.map((user,i) => {
               return (
-                <tr>
-                  <td className="py-2 px-4 border-b border-r text-center">
+                <tr key={i}>
+                  <td className="py-2 px-4 border-b border-r text-center" >
                     {user.idd}
                   </td>
-                  <td className="py-2 px-4 border-b border-r text-center">
+                  <td className="py-2 px-4 border-b border-r text-center" >
                     {user.name}
                   </td>
-                  <td className="py-2 px-4 border-b border-r text-center">
-                    {user.email}
+                  <td className="py-2 px-4 border-b border-r text-center" >
+                  {"Rs "+user.price}
                   </td>
-                  <td className="py-2 px-4 border-b border-r text-center">
+                  <td className="py-2 px-4 border-b border-r text-center" >
                     {user.desc}
                   </td>
                   <td className="py-2 px-4 border-b border-r text-center">
