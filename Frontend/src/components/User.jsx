@@ -27,7 +27,7 @@ const User = () => {
     <>
       <div className=" bg-black h-screen flex items-center justify-center flex-col ">
         <div className="bg-gray-50 mb-2 rounded-sm w-10/12 text-center font-extrabold text-slate-950 text-2xl">
-          <Link to="/Create">Add +</Link>
+          <Link to="/Create">Add </Link>
         </div>
         <table className="w-10/12 bg-white border border-gray-300">
           <thead>
