@@ -58,12 +58,12 @@ const User = () => {
                   <td className="py-2 px-4 border-b border-r text-center">
                     <Link
                       to={`/Update/${user._id}`}
-                      className="ml-4 mt-2 bg-slate-500  rounded-sm"
+                      className="ml-4 mt-2 bg-black text-white rounded-md inline-block w-3/6"
                     >
                       Edit
                     </Link>
                     <button
-                      className="ml-4 mt-2 bg-slate-500 w-3/6 rounded-md"
+                      className="ml-4 mt-2 bg-black text-white w-3/6 rounded-md"
                       onClick={(e) => handleDelete(user._id)}
                     >
                       Delete

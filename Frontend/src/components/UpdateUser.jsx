@@ -26,7 +26,7 @@ const UpdateUser = () => {
   const Submit=(e)=>{
     e.preventDefault();
         axios.put("http://localhost:8000/updateUser/"+id,{
-            idd,name,email,desc
+            idd,name,price,desc
         })
         .then(data=>{console.log(data)
             Navigation("/")
